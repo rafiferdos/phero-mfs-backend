@@ -2,9 +2,7 @@ import { Router } from 'express'
 
 const router = Router()
 
-const routers = [
-  
-]
+const routers = []
 
 routers.forEach((route) => router.use(route.path, route.router))
 
