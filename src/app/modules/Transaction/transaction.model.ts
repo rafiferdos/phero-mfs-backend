@@ -31,6 +31,7 @@ const MTransaction = mongoose.model<TTransaction>(
 
 export default MTransaction
 
+// Request Schema
 const RequestSchema = new Schema<IRequest>(
   {
     agent: {
@@ -53,3 +54,5 @@ const RequestSchema = new Schema<IRequest>(
 
   { timestamps: true, versionKey: false },
 )
+
+export const MRequest = mongoose.model<IRequest>('Request', RequestSchema)
