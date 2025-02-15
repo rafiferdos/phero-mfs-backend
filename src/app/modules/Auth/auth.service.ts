@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes'
 import AppError from '../../errors/AppError'
 import { ILogin, IUser } from './auth.interface'
 import { MUser } from './auth.model'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import config from '../../config'
 
 // Service to create user into database

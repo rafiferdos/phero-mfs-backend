@@ -3,7 +3,7 @@ import { MUser } from '../Auth/auth.model'
 import { ITransaction } from './transaction.interface'
 import AppError from '../../errors/AppError'
 import { StatusCodes } from 'http-status-codes'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import mongoose from 'mongoose'
 import MTransaction, { MRequest } from './transaction.model'
 

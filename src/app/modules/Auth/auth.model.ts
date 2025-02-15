@@ -2,7 +2,7 @@ import { string } from 'zod'
 import { IUser } from './auth.interface'
 import { model, Schema } from 'mongoose'
 import config from '../../config'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 // User schema for MongoDB
 const userSchema = new Schema<IUser>(
