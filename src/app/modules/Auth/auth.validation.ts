@@ -22,7 +22,7 @@ const VRegistration = z.object({
 })
 
 // Validation schema for login
-const Vlogin = z.object({
+const VLogin = z.object({
   identifier: z.string(),
   pin: z
     .string()
@@ -32,5 +32,5 @@ const Vlogin = z.object({
 
 export const VUserAuth = {
   VRegistration,
-  Vlogin,
+  VLogin,
 }

@@ -90,4 +90,5 @@ export const CAuth = {
   CGetUsers,
   CUpdateUserStatus,
   CUpdateAgentStatus,
+  CGetOneUser,
 }
