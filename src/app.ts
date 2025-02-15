@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express'
 import router from './app/router'
 import cookieParser from 'cookie-parser'
-import globalErrorHandler from ''
+import globalErrorHandler from './app/middlewares/globalErrorHandler'
+import cors from 'cors'
