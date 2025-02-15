@@ -21,7 +21,7 @@ const SCreateUserIntoDB = async (payload: IUser) => {
 }
 
 // Service to login user into database
-const SLoginUserIntoDB = async (payload: ILogin) => {
+const SLoginUserToDB = async (payload: ILogin) => {
   // Check if user exists
   const authenticatedUser = await MUser.findOne({
     $or: [{ email: payload.identifier }, { phone: payload.identifier }],
@@ -53,7 +53,7 @@ const SUpdateAgentStatus = async (id: string, status: boolean) =>
   await MUser.findByIdAndUpdate(id, { isActive: status }, { new: true })
 
 // Service to update user
-const SUpdateUser = async (id: string) =>
+const SUpdateUserStatus = async (id: string) =>
   await MUser.findByIdAndUpdate(id, { isBlocked: true }, { new: true })
 
 // Service to get one user
@@ -65,9 +65,9 @@ const SGetUser = async () => await MUser.find().select('-pin')
 
 export const SUser = {
   SCreateUserIntoDB,
-  SLoginUserIntoDB,
+  SLoginUserToDB,
   SUpdateAgentStatus,
-  SUpdateUser,
+  SUpdateUserStatus,
   SGetOneUser,
   SGetUser,
 }
